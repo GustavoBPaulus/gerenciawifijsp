@@ -1,0 +1,318 @@
+/*===================================================================*\
+
+							BOTÃO
+\*====================================================================*/
+
+.botao{
+	display: inline-block;
+	background-color: #bbb;
+	color: #fff;
+	border: none;
+	
+	line-height: normal;
+	 /* tamanho da fonte é o mesmo da tag mãe */
+	font-size: 1em;
+	/* aqui o padding está relativo a fonte do pai, nesse caso aonde o botão está inserido */
+	padding: 0.8em 1.2em;
+	text-decoration: none;
+
+}
+
+/* pseudo classes representam ações quase que uma uma analogia a métodos enquanto pseudo elementos seriam uma analogia a alterações ligadas a exempo, por exemplo o after*/
+.botao:hover, .botao:focus{
+	background-color: #aaa;
+	text-decoration: none;
+	color: #fff;
+}
+
+.botao--assinar, .botao--login{
+	background-color: #127d00;
+}
+
+.botao--assinar:hover, .botao--assinar:focus,
+.botao--login:hover, .botao--login:focus{
+	color: 0e6400;
+}
+
+.botao--principal{
+	background-color: #004b86;
+
+	border-radius: 10px;
+}
+.botao--principal:hover, .botao--principal:focus{
+	background-color: #003b6a;
+}
+
+.botao--formulario{
+	text-align: center;
+	margin-top: 20px;
+	background-color:  #006400;
+
+
+}
+
+/*===================================================================*\
+
+							NAVEGAÇÃO
+\*====================================================================*/
+.navegacao{
+
+}
+
+.navegacao__menu{
+	float: right;
+}
+
+.navegacao--assinatura{
+	text-align: center;
+}
+
+/*===================================================================*\
+
+							MENU
+\*====================================================================*/
+	.menu{
+	
+		margin: 0;
+		
+
+		font-size: 1.4rem;
+
+		
+		list-style: none;
+
+	}
+	/* Media query para configuração em telas menores que tem até 991px*/
+	@media(max-width: 991px){
+		.menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+
+		display: none;
+		width: 200px;
+		padding: 20px;
+		border-right: 1px solid #eee;
+
+		
+
+		background-color: #fbfbfb;
+
+	}
+	.menu--exibindo{
+		display: block;
+
+	}
+
+		.menu__item{
+		display: block;
+
+
+		line-height: 3;
+
+					}
+
+	.menu__item--botao{
+		margin-top: 20px;
+					}
+	
+								}
+
+	/* Media query para configuração em telas grandes, com larguras a partir de 992px  */
+	@media(min-width: 992px){
+
+		.menu__item{
+			display: inline-block;
+
+			padding-right: 20px;
+
+		}
+		/* Essa é uma pseudoclasse que permite selecionar o ultimo item de uḿ tipo, nesse caso queremos que o ultimo item do tipo .menu__item não tenha padding a direita  */
+		.menu__item:last-of-type{
+			padding-right: 0px;
+		}
+
+	}
+
+	
+
+/*===================================================================*\
+
+							CHAVEADOR
+\*====================================================================*/
+.botao-chaveador{
+	width: 24px;
+	height: 24px;
+	border: 0;
+
+	background: none;
+	background-image: url(../images/bars.png);
+	
+	outline: none;
+
+}
+
+@media(min-width: 992px){
+	/*QUando estiver em um monitor grande remove o botão chaveador   */
+	.botao-chaveador{
+		display: none;
+	}
+}
+
+/*===================================================================*\
+
+							PRINCIPAL
+\*====================================================================*/
+
+
+.principal{
+	/* a fonte padrão está configurada como 10px no arquivo base.css, por isso para configurar 16 px devo adicionar 1.6 rem */
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+.principal__titulo{
+	margin: 0;
+	
+	color: #fff;
+	/* 54 pixels quando a fonte estiver na configuração padrão em relação ao componente pai, como o componente. principal está com 16 pixels
+	para principal titulo ter 54 pixels 54/16=3.375em*/
+	font-size: 3.375em;
+	/*  line height é o tamanho da linha do box model, 1 significa que a altura da linha é igual ao tamanho da fonte, mas queremos deixar um pouco mais colado então vai ser 0.9*/
+	line-height: 0.9;
+	/*aplicar sombra na fonte, o primeiro parÂmetro é o eixo x da sombra e o segundo o eixo y da sombra*/
+	text-shadow: 1px 1px #313131;
+}
+
+.principal__subtitulo{
+	/* primeiro parametro é a margin de cima e de baixo e o segundo parâmtro margin dos lados */
+	margin: 60px 0px;
+
+	color:#fff;
+	/* quero que fique com o mesmo tamanho de fonte do elemento pai, eu não precisaria definir isso como 1em, mas preferi deixar explicito */
+	font-size: 1em;
+
+}
+
+.principal__acao{
+	font-size: 1em;
+}
+/* quando a resolução do dispositivo for maior que 992px essas regras serão aplicadas, essa configuração de 992px foi baseada na configuração para monitores apresentada no bootstrap */
+@media(min-width: 992px){
+	/*Como a página foi desenvolvida com o conceito mobile first, os textos estão ideias para tela pequenas, essa media query ajusta a fonte da principal para telas grandes */
+	.principal{
+		/*Essa configuração relativa é em relação ao elemento pai  */
+		padding-left: 10%;
+		padding-right: 10%;
+		/* se baseia na fonte padrão nesse caso está defenido como 10px */
+		font-size: 2.2rem;
+	}
+}
+
+
+
+/*===================================================================*\
+
+							FORMULARIO
+\*====================================================================*/
+.caixa-login_formulario{
+	border: 1px solid #ccc;
+	text-align: center;
+	padding-bottom: 1%;
+
+	margin-right:  25%;
+	margin-left: 25%;
+	
+	margin-top: 23%;
+	margin-bottom: 23%;
+	
+	
+	height: 50%;
+	width: 50%;
+
+}
+.titulo-formulario{
+	margin: 0;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #ccc;
+	font-size: 2.6rem;
+	font-weight: normal;
+	color: #004b86;
+}
+.titulo-formulario--login{
+	color: #006400;
+}
+
+
+/*===================================================================*\
+
+							GRUPO ENTRADA
+\*====================================================================*/
+
+.grupo-entrada{
+	margin-bottom: 15px;
+}
+
+.grupo-entrada >label{
+	display: block;
+
+	font-weight: bold;
+}
+.grupo-entrada--login >label{
+	display: block;
+}
+
+
+@media(min-width: 992px){
+	.grupo-entrada--login >label{
+		display: inline;
+	}
+
+
+}
+
+/*===================================================================*\
+
+							CAMPO
+\*====================================================================*/
+.campo {
+	display: block;
+	width: 100%;
+	height: 2.8em;
+
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+
+	background-color: #fff;
+
+	font-size: 1.4rem;
+}
+.campo--login {
+	display: inline;
+	width: 100%;
+	
+}
+
+@media(min-width: 992px){
+	.campo--login {
+		width: 50%;
+
+	
+}
+
+
+}
+
+/*===================================================================*\
+
+							header
+\*====================================================================*/
+.titulo-header{
+	color: #006400;
+	font-size: 2.4rem;
+	font-weight: bold;
+	display: inline;
+
+}

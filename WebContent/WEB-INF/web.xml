@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>wifiAlunos</display-name>
+ 
+  <!-- servlet login -->
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<servlet-class>servlets.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet start -->
+  <servlet>
+  	<servlet-name>StartController</servlet-name>
+  	<servlet-class>servlets.StartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StartController</servlet-name>
+  	<url-pattern>/start</url-pattern>
+  </servlet-mapping>
+  
+    <!-- servlet incluir -->
+  <servlet>
+  	<servlet-name>IncluirController</servlet-name>
+  	<servlet-class>servlets.IncluirController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>IncluirController</servlet-name>
+  	<url-pattern>/incluir</url-pattern>
+  </servlet-mapping>
+  
+  
+      <!-- servlet editar -->
+  <servlet>
+  	<servlet-name>EditarController</servlet-name>
+  	<servlet-class>servlets.EditarController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditarController</servlet-name>
+  	<url-pattern>/editar</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet excluir -->
+  <servlet>
+  	<servlet-name>ExcluirController</servlet-name>
+  	<servlet-class>servlets.ExcluirController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExcluirController</servlet-name>
+  	<url-pattern>/excluir</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

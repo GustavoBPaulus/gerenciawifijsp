@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8"/>
+	<!-- é preciso adicionar esse viewport para dispositivos mobiles não tentarem "simular" telas maiores e o "front" não ficar responsivo  -->
+	<meta name="viewport" content="width=device-with, initial-scalte=1"/>
+
+	<title>MyPilas</title>
+	<!--<link rel="stylesheet" type="text/css" href="css/reset.css">-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/componentes.css">
+</head>
+
+<body>
+
+	<header class="layout-cabecalho layout-cabecalho--home">
+		<div class="container">
+			<nav class="nevegacao">
+				<img src="images/logo.png" width="100" height="35" alt="MyPilas"/>	
+				<div class="navegacao__menu">
+					<button class="botao-chaveador js-botao-chaveador"></button>
+					
+					<ul class="menu js-menu">
+						<li class="menu__item">
+							<a href="#"> Como funciona </a> 
+						</li>
+						<li class="menu__item">
+							<a href="#planos"> Planos e preços</a> 
+						</li>
+						<li class="menu__item">
+							<a href="#">Contato</a> 
+						</li>
+
+						
+
+					</ul>
+				
+				</div>
+
+			</nav>
+			
+		</div>
+	</header>
+
+	<!--aqui é a principal, para o sistema -->
+	<section class="layout-principal">
+		<div class="container">
+			
+			<div class="principal">
+				<h1 class="principal__titulo">As finanças da sua empresa em ordem</h1>
+				<p class="principal__subtitulo">Software de gestão simples e prático para pequenos negócios</p>
+
+				<div class="principal__acao">
+
+					<a href="#planos" class="botao botao--principal">Conheça os planos</a>
+					
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	
+	<footer class="layout-rodape">
+		<div class="container">
+			<p>&copy; TI -  IFRS. Todos os direitos reservados. </p>
+
+		</div>
+
+	</footer>
+
+	<script type="text/javascript" src="javascripts/app.js"></script>
+
+</body>
+</html>

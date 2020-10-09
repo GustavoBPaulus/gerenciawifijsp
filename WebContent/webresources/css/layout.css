@@ -1,0 +1,79 @@
+.layout-cabecalho{
+	line-height: 2%;
+	height: 2%;	
+	
+	border-bottom: 1px solid #ccc;
+
+	background-color: #fff;
+}
+/*
+.layout-cabecalho img{
+	margin-top:12px;
+
+}
+*/
+
+.layout-cabecalho--home{
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0; 
+	z-index: 1;
+	
+
+
+}
+
+
+
+
+.layout-principal{
+	padding: 80px 0;
+	/*margin em relação ao elemento que está acima*/
+	margin-top: 60px;
+	
+	background-color: #7ab55c;
+	
+	
+
+ 
+}
+
+
+
+.layout-rodape{
+	padding: 10px 0;
+	
+	position: relative;
+	bottom: 0;
+	margin-bottom: 0;
+	width: 100%;
+
+	background-color: #484848;
+
+
+	color: #fff;
+	text-align: center;
+
+}
+
+.layout-rodape--login{
+	height: 2%;
+	line-height: 2%;
+	
+	position: fixed;
+
+}
+/*Em telas que tem até 750px que são telas pequenas, tem esse margin-botton pra separar um plano dos outros, em telas grandes não precisa essa margin */
+@media(max-width: 749px){
+	/*Aplica a todos as linhas de planos que não tiverem a classe ultima-coluna, isso acontece porque o ultimo plano não precisa ter espaçamento em relação ao elemento debaixo*/
+.layout-planos .row > div:not(.ultima-coluna){
+	margin-bottom: 40px;
+}
+}
+
+.layout-login{
+	
+	
+}
